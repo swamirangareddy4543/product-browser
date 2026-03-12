@@ -74,6 +74,16 @@ fun ProductListScreen(
                         style = MaterialTheme.typography.titleLarge
                     )
                 },
+                navigationIcon = {
+                    Icon(
+                        imageVector = AppIcons.ShoppingBag,
+                        contentDescription = "Product Browser",
+                        modifier = Modifier
+                            .padding(start = 12.dp)
+                            .size(28.dp),
+                        tint = MaterialTheme.colorScheme.onPrimaryContainer
+                    )
+                },
                 colors = TopAppBarDefaults.topAppBarColors(
                     containerColor = MaterialTheme.colorScheme.primaryContainer
                 )

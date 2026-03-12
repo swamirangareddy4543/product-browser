@@ -90,6 +90,58 @@ object AppIcons {
         }.build()
     }
 
+    val ShoppingBag: ImageVector by lazy {
+        ImageVector.Builder(
+            name = "ShoppingBag",
+            defaultWidth = 24.dp,
+            defaultHeight = 24.dp,
+            viewportWidth = 24f,
+            viewportHeight = 24f
+        ).apply {
+            path(
+                fill = SolidColor(Color.Black),
+                fillAlpha = 1f,
+                stroke = null,
+                strokeAlpha = 1f,
+                strokeLineWidth = 1f,
+                strokeLineCap = StrokeCap.Butt,
+                strokeLineJoin = StrokeJoin.Bevel,
+                strokeLineMiter = 1f,
+                pathFillType = PathFillType.NonZero
+            ) {
+                // Bag body
+                moveTo(18f, 6f)
+                horizontalLineToRelative(-2f)
+                curveToRelative(0f, -2.21f, -1.79f, -4f, -4f, -4f)
+                reflectiveCurveTo(8f, 3.79f, 8f, 6f)
+                horizontalLineTo(6f)
+                curveToRelative(-1.1f, 0f, -2f, 0.9f, -2f, 2f)
+                verticalLineToRelative(12f)
+                curveToRelative(0f, 1.1f, 0.9f, 2f, 2f, 2f)
+                horizontalLineToRelative(12f)
+                curveToRelative(1.1f, 0f, 2f, -0.9f, 2f, -2f)
+                verticalLineTo(8f)
+                curveToRelative(0f, -1.1f, -0.9f, -2f, -2f, -2f)
+                close()
+                // Handle left side
+                moveTo(12f, 4f)
+                curveToRelative(1.1f, 0f, 2f, 0.9f, 2f, 2f)
+                horizontalLineTo(10f)
+                curveToRelative(0f, -1.1f, 0.9f, -2f, 2f, -2f)
+                close()
+                // Handle top gap (cutout to show handle outline)
+                moveTo(12f, 13f)
+                curveToRelative(-1.1f, 0f, -2f, -0.9f, -2f, -2f)
+                horizontalLineToRelative(-1f)
+                curveToRelative(0f, 1.66f, 1.34f, 3f, 3f, 3f)
+                reflectiveCurveToRelative(3f, -1.34f, 3f, -3f)
+                horizontalLineToRelative(-1f)
+                curveToRelative(0f, 1.1f, -0.9f, 2f, -2f, 2f)
+                close()
+            }
+        }.build()
+    }
+
     val ArrowBack: ImageVector by lazy {
         ImageVector.Builder(
             name = "ArrowBack",
